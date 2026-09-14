@@ -1,127 +1,166 @@
-💻 Linux Networking Commands
+# 💻 Linux Networking Commands
 
-I practiced several Linux networking commands useful for troubleshooting and system administration.
-__________________________________________________________________________________________________________
+I practiced several Linux networking commands useful for **troubleshooting, network diagnostics, and system administration**.
 
-ping
+---
+
+## 📡 `ping`
 
 Used to test basic network connectivity between the local system and a remote host.
 
+### Command
+
+```bash
 ping google.com
+```
 
-Example use:
+### 💡 What does it tell us?
 
+```text
 Is the destination reachable?
-__________________________________________________________________________________________________________
+```
 
-traceroute
+> ✅ **Use case:** Quickly check whether a remote host is reachable over the network.
 
-Used to identify the path packets take to reach a destination.
+---
 
+## 🛰️ `traceroute`
+
+Used to identify the **path packets take** to reach a destination.
+
+### Command
+
+```bash
 traceroute google.com
+```
 
-On Windows:
+### 🪟 Windows
 
+```cmd
 tracert google.com
+```
 
-Useful for identifying:
+### 🔍 Useful for identifying
 
-• Network hops
-• Routing problems
-• Connection delays
-__________________________________________________________________________________________________________
+- Network hops
+- Routing problems
+- Connection delays
 
-netstat
+> 💡 **Use case:** Helps identify where network traffic is getting delayed or interrupted.
 
-Used to display network connections, listening ports and network statistics.
+---
 
+## 🔌 `netstat`
+
+Used to display **network connections, listening ports, and network statistics**.
+
+### Command
+
+```bash
 netstat -tuln
+```
 
-Useful for checking which ports are listening on a system.
+Useful for checking which ports are currently listening on a system.
 
-Note: On many modern Linux distributions, ss is preferred over netstat.
+> ⚠️ **Note:** On many modern Linux distributions, `ss` is preferred over `netstat`.
 
-Example:
+### Modern alternative
 
+```bash
 ss -tuln
-__________________________________________________________________________________________________________
+```
 
-curl
+> 💡 **Use case:** Check which services are listening for network connections.
 
-A powerful command-line tool for making HTTP requests and interacting with web services.
+---
 
+## 🌍 `curl`
+
+A powerful command-line tool for making **HTTP requests** and interacting with web services.
+
+### Basic Request
+
+```bash
 curl https://example.com
+```
 
-Check HTTP headers:
+### Check HTTP Headers
 
+```bash
 curl -I https://example.com
+```
 
-Useful for:
+### 🔍 Useful for
 
-• API testing
-• HTTP troubleshooting
-• Checking web servers
-• Testing endpoints
-__________________________________________________________________________________________________________
+- 🧪 API testing
+- 🌐 HTTP troubleshooting
+- 🖥️ Checking web servers
+- 🔗 Testing endpoints
 
-dig
+> 💡 **Use case:** Quickly test whether a web server or API endpoint is responding correctly.
 
-Used for DNS queries and troubleshooting domain resolution.
+---
 
+## 🔎 `dig`
+
+Used for **DNS queries** and troubleshooting domain resolution.
+
+### Basic Query
+
+```bash
 dig google.com
+```
 
-Query specific DNS records:
+### Query Specific DNS Records
 
+```bash
 dig google.com A
 dig google.com MX
 dig google.com NS
-__________________________________________________________________________________________________________
+```
 
-nslookup
+| Record | Purpose |
+|---|---|
+| `A` | IPv4 address |
+| `MX` | Mail server |
+| `NS` | Name server |
 
-Another tool used to query DNS information.
+> 💡 **Use case:** Useful for investigating DNS configuration and domain resolution problems.
 
+---
+
+## 🔍 `nslookup`
+
+Another command-line tool used to query **DNS information**.
+
+### Command
+
+```bash
 nslookup google.com
+```
 
-Useful for quickly checking:
+### 🔍 Useful for checking
 
-• IP addresses
-• DNS servers
-• Domain resolution
+- IP addresses
+- DNS servers
+- Domain resolution
 
+> 💡 **Use case:** Quickly verify whether a domain is resolving correctly.
 
+---
 
+# 🧰 Quick Command Reference
 
+| Command | Purpose |
+|---|---|
+| `ping` | Test network connectivity |
+| `traceroute` | Trace the network path |
+| `ss` | Check listening ports & connections |
+| `netstat` | View network statistics & connections |
+| `curl` | Test HTTP requests & APIs |
+| `dig` | Perform DNS queries |
+| `nslookup` | Check DNS resolution |
 
+---
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-______________________________________________________________________________________________________________________
+> 🚀 **DevOps Connection:** These commands are essential for troubleshooting connectivity, diagnosing services, testing APIs, investigating DNS issues, and understanding how systems communicate across a network.
