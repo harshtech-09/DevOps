@@ -1,55 +1,72 @@
-🔗 OSI & TCP/IP Models
+#  🔗 OSI Model
 
-Understanding networking models is essential for troubleshooting and understanding how data moves between systems.
+The **OSI (Open Systems Interconnection) Model** helps us understand how data moves between systems by dividing network communication into **7 layers**.
 
-OSI Model
+## 📊 OSI Layers
 
-Layer	 Name	            Purpose	                                         Examples
-7	    Application	   Provides network services to applications	        HTTP, HTTPS, DNS, SSH
-6	    Presentation	   Data formatting, encryption and compression	     SSL/TLS, JPEG, JSON
-5	    Session	         Establishes and manages sessions	                 RPC, NetBIOS
-4	    Transport	      Reliable/fast end-to-end communication	           TCP, UDP
-3	    Network	         Routing and logical addressing	                 IP, ICMP
-2	    Data Link	      Frame delivery and MAC addressing	              Ethernet, ARP
-1	    Physical	      Transmission of raw bits	                       Cables, Fiber, Radio
+| Layer | Name | Purpose | Examples |
+|:---:|---|---|---|
+| **7** | Application | Provides network services to applications | HTTP, HTTPS, DNS, SSH |
+| **6** | Presentation | Data formatting, encryption & compression | SSL/TLS, JPEG, JSON |
+| **5** | Session | Establishes & manages sessions | RPC, NetBIOS |
+| **4** | Transport | End-to-end communication | TCP, UDP |
+| **3** | Network | Routing & logical addressing | IP, ICMP |
+| **2** | Data Link | Frame delivery & MAC addressing | Ethernet, ARP |
+| **1** | Physical | Transmission of raw bits | Cable, Fiber, Radio |
 
-Example
+---
 
-When accessing a website:
+## 🌐 Example: Opening a Website
 
-Browser
-   ↓
+When you open a website, data passes through multiple networking layers:
+
+```text
+Application
+    ↓
 HTTP / HTTPS
-   ↓
+    ↓
+Transport
+    ↓
 TCP
-   ↓
+    ↓
+Network
+    ↓
 IP
-   ↓
+    ↓
+Data Link
+    ↓
 Ethernet
-   ↓
+    ↓
 Physical Network
+```
 
-Understanding these layers helps identify where a networking problem is occurring.
+> 💡 **Why it matters:** Understanding these layers helps identify where a networking problem is occurring.
 
+---
 
+#  🌐 TCP/IP Model
 
-🌐 TCP/IP Model
+The **TCP/IP model** is commonly used for real-world networking and Internet communication.
 
-The TCP/IP model is commonly used in real-world networking and Internet communication.
+## 📊 TCP/IP Layers
 
-Layer	             Examples
-Application	       HTTP, HTTPS, DNS, SSH, FTP
-Transport	       TCP, UDP
-Internet	          IP, ICMP
-Network Access	    Ethernet, Wi-Fi, ARP
+| Layer | Examples |
+|---|---|
+| **Application** | HTTP, HTTPS, DNS, SSH, FTP |
+| **Transport** | TCP, UDP |
+| **Internet** | IP, ICMP |
+| **Network Access** | Ethernet, Wi-Fi, ARP |
 
-OSI vs TCP/IP
-OSI Model                 TCP/IP Model
+## 🔄 OSI vs TCP/IP
 
-Application  ─────┐
-Presentation ─────┤
-Session      ─────┤──→   Application
-Transport    ─────────→  Transport
-Network      ─────────→  Internet
-Data Link    ─────┐
-Physical     ─────┴──→   Network Access
+| OSI Model | TCP/IP Model |
+|---|---|
+| Application | Application |
+| Presentation | Application |
+| Session | Application |
+| Transport | Transport |
+| Network | Internet |
+| Data Link | Network Access |
+| Physical | Network Access |
+
+---
